@@ -1,0 +1,19 @@
+{
+  "name": "@writetome51/arrays-match",
+  "version": "1.0.0",
+  "description": "Takes 2 arrays as arguments, and if they match, returns true.  Else, returns false.",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "array",
+    "match",
+   "comparison"
+  ],
+  "author": "Steve Thompson",
+  "license": "MIT",
+  "dependencies": {
+    "basic-data-handling": "latest"
+  }
+}
