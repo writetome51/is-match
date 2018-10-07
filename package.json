@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/arrays-match",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Takes 2 arrays as arguments, and if they match, returns true.  Else, returns false.",
   "main": "",
   "scripts": {
@@ -8,12 +8,16 @@
   },
   "keywords": [
     "array",
+    "arrays",
+    "check",
     "match",
+    "identical",
     "comparison"
   ],
   "author": "Steve Thompson",
   "license": "MIT",
   "dependencies": {
-    "basic-data-handling": "latest"
+    "basic-data-handling": "latest",
+    "error-if-values-are-not-arrays": "latest"
   }
 }

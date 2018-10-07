@@ -2,11 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var isArray_notArray_1 = require("basic-data-handling/isArray_notArray");
 var isEmpty_notEmpty_1 = require("basic-data-handling/isEmpty_notEmpty");
+var error_if_values_are_not_arrays_1 = require("error-if-values-are-not-arrays");
 // Does not work for arrays that contain objects.
 function arraysMatch(array1, array2) {
-    if (isArray_notArray_1.notArray(array1) || isArray_notArray_1.notArray(array2)) {
-        throw new Error('Both parameters must be arrays.');
-    }
+    error_if_values_are_not_arrays_1.errorIfValuesAreNotArrays([array1, array2]);
     return _arraysMatch(array1, array2);
     function _arraysMatch(array1, array2) {
         if (isEmpty_notEmpty_1.isEmpty(array1))

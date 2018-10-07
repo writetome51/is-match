@@ -1,13 +1,12 @@
-import { isArray, notArray} from 'basic-data-handling/isArray_notArray';
+import { isArray } from 'basic-data-handling/isArray_notArray';
 import { isEmpty } from 'basic-data-handling/isEmpty_notEmpty';
+import { errorIfValuesAreNotArrays } from 'error-if-values-are-not-arrays';
 
 
 // Does not work for arrays that contain objects.
 
 export function arraysMatch(array1, array2): boolean {
-	if (notArray(array1) || notArray(array2)) {
-		throw new Error('Both parameters must be arrays.');
-	}
+	errorIfValuesAreNotArrays([array1, array2]);
 	return _arraysMatch(array1, array2);
 
 
