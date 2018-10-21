@@ -1,8 +1,8 @@
 {
   "name": "@writetome51/arrays-match",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Takes 2 arrays as arguments, and if they match, returns true.  Else, returns false.",
-  "main": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
