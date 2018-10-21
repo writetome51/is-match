@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/writetome51/arrays-match.git"
+  },
   "keywords": [
     "array",
     "arrays",
@@ -16,6 +20,10 @@
   ],
   "author": "Steve Thompson",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/writetome51/arrays-match/issues"
+  },
+  "homepage": "https://github.com/writetome51/arrays-match#readme",
   "dependencies": {
     "basic-data-handling": "latest",
     "error-if-values-are-not-arrays": "latest"
