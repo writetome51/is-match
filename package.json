@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/arrays-match",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Takes 2 arrays as arguments, and if they match, returns true.  Else, returns false.",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/writetome51/arrays-match#readme",
   "dependencies": {
-    "basic-data-handling": "latest",
-    "error-if-values-are-not-arrays": "latest"
+    "basic-data-handling": "~1.0.13",
+    "error-if-values-are-not-arrays": "~1.0.2"
   }
 }
