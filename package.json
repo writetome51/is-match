@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/arrays-match",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Takes 2 arrays as arguments, and if they match, returns true.  Else, returns false.",
   "main": "index.js",
   "scripts": {
