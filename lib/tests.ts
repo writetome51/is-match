@@ -1,4 +1,4 @@
-import { arraysMatch } from './arraysMatch';
+import { arraysMatch } from './index';
 
 
 let emptyArr1 = [];
