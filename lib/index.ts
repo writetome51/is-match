@@ -1,5 +1,5 @@
-import { isArray } from 'basic-data-handling/isArray_notArray';
-import { isEmpty } from 'basic-data-handling/isEmpty_notEmpty';
+import { isArray } from '@writetome51/is-array-not-array';
+import { isEmpty } from '@writetome51/is-empty-not-empty';
 import { errorIfValuesAreNotArrays } from 'error-if-values-are-not-arrays';
 
 
