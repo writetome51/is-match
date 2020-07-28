@@ -2,7 +2,7 @@
 
 # arraysMatch(array1, array2): boolean
 
-If `array1` and `array2` match, returns true.  Else, returns false.  
+If `array1` and `array2` match, returns true.  
 It automatically handles checking nested arrays too.  The only thing it  
 can't do is match arrays that contain objects.
 
@@ -28,8 +28,6 @@ can't do is match arrays that contain objects.
 
 
 ## Loading
-
-	// if using TypeScript:
-	import {arraysMatch} from '@writetome51/arraysMatch'; 
-	 // if using ES5 Javascript:
-	var arraysMatch = require('@writetome51/arraysMatch').arraysMatch;
+```js
+import {arraysMatch} from '@writetome51/arrays-match'; 
+```

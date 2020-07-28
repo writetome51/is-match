@@ -1,12 +1,9 @@
 {
   "name": "@writetome51/arrays-match",
-  "version": "1.0.6",
+  "version": "2.0.0",
   "description": "Takes 2 arrays as arguments, and if they match, returns true",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc"
-  },
+  "type": "module",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/writetome51/arrays-match.git"
@@ -26,8 +23,8 @@
   },
   "homepage": "https://github.com/writetome51/arrays-match#readme",
   "dependencies": {
-    "@writetome51/is-array-not-array": "~1.0.0",
-    "@writetome51/is-empty-not-empty": "~1.0.0",
-    "error-if-values-are-not-arrays": "~1.0.2"
+    "@writetome51/is-array-not-array": "^2.0.0",
+    "@writetome51/is-empty-not-empty": "^2.0.0",
+    "error-if-values-are-not-arrays": "^2.0.0"
   }
 }
