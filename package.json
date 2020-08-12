@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/arrays-match",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Takes 2 arrays as arguments, and if they match, returns true",
   "type": "module",
   "main": "index.js",
@@ -14,7 +14,8 @@
     "check",
     "match",
     "identical",
-    "comparison"
+    "comparison",
+    "function"
   ],
   "author": "Steve Thompson",
   "license": "MIT",
@@ -23,8 +24,9 @@
   },
   "homepage": "https://github.com/writetome51/arrays-match#readme",
   "dependencies": {
+    "@arr/every": "^1.0.1",
     "@writetome51/is-array-not-array": "^2.0.0",
-    "@writetome51/is-empty-not-empty": "^2.0.0",
-    "error-if-values-are-not-arrays": "^2.0.0"
+    "@writetome51/is-empty-not-empty": "^2.0.1",
+    "error-if-values-are-not-arrays": "^2.0.1"
   }
 }
