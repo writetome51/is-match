@@ -4,8 +4,6 @@ import {errorIfValuesAreNotArrays} from 'error-if-values-are-not-arrays';
 import every from '@arr/every';
 
 
-// Does not work for arrays that contain objects.
-
 export function arraysMatch(array1, array2) {
 	errorIfValuesAreNotArrays([array1, array2]);
 	return __arraysMatch(array1, array2);

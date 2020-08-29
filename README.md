@@ -3,25 +3,30 @@
 # arraysMatch(array1, array2): boolean
 
 If `array1` and `array2` match, returns true.  
-It automatically handles checking nested arrays too.  The only thing it  
-can't do is match arrays that contain objects.
+It automatically handles checking nested arrays.  
+How the matching is done:  
+if `array1[i] === array2[i]` for every `i` in `array1` and `array2`, it's a match.  
+If `array1[i]` and `array2[i]` are both arrays of equal length, they're passed  
+into a recursive function call.
 
 ## Examples
+```js
+arraysMatch([], []); // true
 
-	arraysMatch([], []); // true
+arraysMatch(['h', 'j'],  ['h', 'j']); // true
 
-	arraysMatch(['h', 'j'],  ['h', 'j']); // true
+arraysMatch(['h', 'j'],  ['h', 'j', 'k']); // false
 
-	arraysMatch(['h', 'j'],  ['h', 'j', 'k']); // false
+arraysMatch([1, 2, [3]], [1, 2, [3]]); // true
 
-	arraysMatch([1, 2, [3]], [1, 2, [3]]); // true
+let obj = {prop: 1};
+arraysMatch([obj], [{prop:1}]); // false
 
-	arraysMatch([1, 2, [3, [4]]], [1, 2, [3, [4]]]); // true
+arraysMatch([obj], [obj]); // true
 
-	arraysMatch([1, 2, [3, [4, 5]]], [1, 2, [3, [4, 8]]]); // false
-
-	arraysMatch([ {prop:1} ], [ {prop:1} ]); // false
-
+let obj2 = obj;
+arraysMatch([obj], [obj2]); // true
+```
 
 ## Installation
 `npm i  @writetome51/arrays-match`
