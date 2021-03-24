@@ -3,8 +3,11 @@
 # arraysMatch(array1, array2): boolean
 
 If `array1` and `array2` match, returns true.  
-It automatically handles checking nested arrays.  
+It automatically handles checking nested arrays. 
+
 How the matching is done:  
+If `(array1 === array2)`, returns true.  
+Else, it tries element-by-element matching:  
 if `array1[i] === array2[i]` for every `i` in `array1` and `array2`, it's a match.  
 If `array1[i]` and `array2[i]` are both arrays of equal length, they're passed  
 into a recursive function call.

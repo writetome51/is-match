@@ -10,6 +10,7 @@ export function arraysMatch(array1, array2) {
 
 
 	function __arraysMatch(array1, array2) {
+		if (array1 === array2) return true;
 		if (isEmpty(array1)) return isEmpty(array2);
 		if (array1.length !== array2.length) return false;
 
