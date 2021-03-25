@@ -10,7 +10,7 @@ export function isMatch(item1, item2) {
 	if (isArray(item1) && isArray(item2) && (item1.length === item2.length)) {
 
 		for (let i = 0, length = item1.length; i < length; ++i) {
-			if (not(isMatch(item1[i], item2[i]))) return false;
+			if (not( isMatch(item1[i], item2[i]) )) return false;
 		}
 		return true;
 	}

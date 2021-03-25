@@ -1,7 +1,7 @@
 {
   "name": "@writetome51/is-match",
   "version": "0.0.1",
-  "description": "Takes 2 arguments, and if they match, returns true.  Arrays dont have to be identical via === to be judged a match",
+  "description": "A substitute for using === operator.  Useful when arrays don't have to be identical via === to be deemed a match. They must only have identical content.",
   "type": "module",
   "main": "index.js",
   "types": "index.d.ts",
@@ -10,15 +10,15 @@
     "url": "git+https://github.com/writetome51/is-match.git"
   },
   "keywords": [
+    "match",
+    "identical",
+    "comparison",
+    "function",
     "array",
     "arrays",
     "check",
     "data",
-    "type",
-    "match",
-    "identical",
-    "comparison",
-    "function"
+    "type"
   ],
   "author": "Steve Thompson",
   "license": "MIT",

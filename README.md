@@ -21,19 +21,40 @@ function isMatch(item1, item2) {
 ```js
 isMatch([], []); // true
 
-isMatch(['h', 'j'],  ['h', 'j']); // true
+isMatch(['a', 'b'],  ['a', 'b']); // true
 
-isMatch(['h', 'j'],  ['h', 'j', 'k']); // false
+isMatch(['a', 'b'],  ['a', 'b', 'c']); // false
 
 isMatch([1, 2, [3]], [1, 2, [3]]); // true
+
+isMatch([1, 2, [3]], [1, 2, [3, []]]); // false
 
 let obj = {prop: 1};
 isMatch([obj], [{prop:1}]); // false
 
-isMatch([obj], [obj]); // true
-
 let obj2 = obj;
 isMatch([obj], [obj2]); // true
+
+
+// Behaves the same as === operator for primitive types and non-array objects:
+
+isMatch('', ''); // true
+
+isMatch('0', '0'); // true
+
+isMatch('0', 0); // false
+
+isMatch('00', '01'); // false
+
+isMatch(Infinity, Infinity); // true
+
+isMatch(undefined, undefined); // true
+
+let obj = {prop: 1};
+isMatch(obj, {prop:1}); // false
+
+let obj2 = obj;
+isMatch(obj, obj2); // true
 ```
 
 ## Installation
