@@ -1,41 +1,48 @@
 [![npm version](https://badge.fury.io/js/%40writetome51%2Farrays-match.svg)](https://badge.fury.io/js/%40writetome51%2Farrays-match) ![NpmLicense](https://img.shields.io/npm/l/%40writetome51%2Farrays-match.svg) ![npm](https://img.shields.io/npm/dw/%40writetome51%2Farrays-match.svg)
 
-# arraysMatch(array1, array2): boolean
+# isMatch(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item1: any,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item2: any<br>): boolean
+ 
+Works for any data type, but really intended for array comparison.  
+The algorithm:
+```
+function isMatch(item1, item2) {
+    if (item1 === item2) return true;
 
-If `array1` and `array2` match, returns true.  
-It automatically handles checking nested arrays. 
+    if (isArray(item1) && isArray(item2) && (item1.length === item2.length)) {
 
-How the matching is done:  
-If `(array1 === array2)`, returns true.  
-Else, it tries element-by-element matching:  
-if `array1[i] === array2[i]` for every `i` in `array1` and `array2`, it's a match.  
-If `array1[i]` and `array2[i]` are both arrays of equal length, they're passed  
-into a recursive function call.
+        for (let i = 0, length = item1.length; i < length; ++i) {
+            if (not(isMatch( item1[i], item2[i] ))) return false;
+        }
+        return true;
+    }
+    else return false;
+}
+```
 
 ## Examples
 ```js
-arraysMatch([], []); // true
+isMatch([], []); // true
 
-arraysMatch(['h', 'j'],  ['h', 'j']); // true
+isMatch(['h', 'j'],  ['h', 'j']); // true
 
-arraysMatch(['h', 'j'],  ['h', 'j', 'k']); // false
+isMatch(['h', 'j'],  ['h', 'j', 'k']); // false
 
-arraysMatch([1, 2, [3]], [1, 2, [3]]); // true
+isMatch([1, 2, [3]], [1, 2, [3]]); // true
 
 let obj = {prop: 1};
-arraysMatch([obj], [{prop:1}]); // false
+isMatch([obj], [{prop:1}]); // false
 
-arraysMatch([obj], [obj]); // true
+isMatch([obj], [obj]); // true
 
 let obj2 = obj;
-arraysMatch([obj], [obj2]); // true
+isMatch([obj], [obj2]); // true
 ```
 
 ## Installation
-`npm i  @writetome51/arrays-match`
+`npm i  @writetome51/is-match`
 
 
 ## Loading
 ```js
-import {arraysMatch} from '@writetome51/arrays-match'; 
+import {isMatch} from '@writetome51/is-match'; 
 ```

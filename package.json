@@ -1,17 +1,20 @@
 {
-  "name": "@writetome51/arrays-match",
-  "version": "2.0.3",
-  "description": "Takes 2 arrays as arguments, and if they match, returns true",
+  "name": "@writetome51/is-match",
+  "version": "0.0.1",
+  "description": "Takes 2 arguments, and if they match, returns true.  Arrays dont have to be identical via === to be judged a match",
   "type": "module",
   "main": "index.js",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/writetome51/arrays-match.git"
+    "url": "git+https://github.com/writetome51/is-match.git"
   },
   "keywords": [
     "array",
     "arrays",
     "check",
+    "data",
+    "type",
     "match",
     "identical",
     "comparison",
@@ -20,13 +23,11 @@
   "author": "Steve Thompson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/writetome51/arrays-match/issues"
+    "url": "https://github.com/writetome51/is-match/issues"
   },
-  "homepage": "https://github.com/writetome51/arrays-match#readme",
+  "homepage": "https://github.com/writetome51/is-match#readme",
   "dependencies": {
-    "@arr/every": "^1.0.1",
     "@writetome51/is-array-not-array": "^2.0.0",
-    "@writetome51/is-empty-not-empty": "^2.0.1",
-    "error-if-values-are-not-arrays": "^2.0.1"
+    "@writetome51/not": "^2.0.0"
   }
 }

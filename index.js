@@ -1,25 +1,18 @@
 import {isArray} from '@writetome51/is-array-not-array';
-import {isEmpty} from '@writetome51/is-empty-not-empty';
-import {errorIfValuesAreNotArrays} from 'error-if-values-are-not-arrays';
-import every from '@arr/every';
+import {not} from '@writetome51/not';
 
 
-export function arraysMatch(array1, array2) {
-	errorIfValuesAreNotArrays([array1, array2]);
-	return __arraysMatch(array1, array2);
+// Works for any data type, but really intended for array comparison.
 
+export function isMatch(item1, item2) {
+	if (item1 === item2) return true;
 
-	function __arraysMatch(array1, array2) {
-		if (array1 === array2) return true;
-		if (isEmpty(array1)) return isEmpty(array2);
-		if (array1.length !== array2.length) return false;
+	if (isArray(item1) && isArray(item2) && (item1.length === item2.length)) {
 
-		return every(array1, (item, index) => {
-			let item2 = array2[index];
-
-			if (isArray(item) && isArray(item2)) return __arraysMatch(item, item2);
-			else return (item === item2);
-		});
+		for (let i = 0, length = item1.length; i < length; ++i) {
+			if (not(isMatch(item1[i], item2[i]))) return false;
+		}
+		return true;
 	}
-
+	else return false;
 }
