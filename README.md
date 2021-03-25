@@ -25,9 +25,10 @@ isMatch(['a', 'b'],  ['a', 'b']); // true
 
 isMatch(['a', 'b'],  ['a', 'b', 'c']); // false
 
-isMatch([1, 2, [3]], [1, 2, [3]]); // true
+// Elements must be in matching order to match:
+isMatch(['a', 'b', 'c'],  ['c', 'b', 'a']); // false
 
-isMatch([1, 2, [3]], [1, 2, [3, []]]); // false
+isMatch([1, 2, [3]], [1, 2, [3]]); // true
 
 let obj = {prop: 1};
 isMatch([obj], [{prop:1}]); // false
