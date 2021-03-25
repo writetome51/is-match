@@ -1,5 +1,3 @@
-[![npm version](https://badge.fury.io/js/%40writetome51%2Farrays-match.svg)](https://badge.fury.io/js/%40writetome51%2Farrays-match) ![NpmLicense](https://img.shields.io/npm/l/%40writetome51%2Farrays-match.svg) ![npm](https://img.shields.io/npm/dw/%40writetome51%2Farrays-match.svg)
-
 # isMatch(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item1: any,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item2: any<br>): boolean
  
 Works for any data type, but really intended for array comparison.  
